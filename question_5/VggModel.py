@@ -24,7 +24,7 @@ class VggModel:
         else:
             # load owned pretrained model
             self._model = vgg19_bn(num_classes=10).to(self._device)
-            self._model.load_state_dict(torch.load(model_path))
+            self._model.load_state_dict(torch.load(model_path, map_location=self._device))
 
     def load_hyperparameter(
         self,

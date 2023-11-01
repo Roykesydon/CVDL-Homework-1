@@ -25,6 +25,10 @@
 
 5. Train VGG19_bn on CIFAR10
 
+### Environment
+
+- Python 3.8
+
 ### Setup
 
 1. Install dependencies
@@ -37,6 +41,12 @@
 
    ```shell
    pip3 install --upgrade torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+   ```
+
+   MacOS 裝 PyQt5 遇到問題的話，建議用 conda 裝
+   
+   ```shell
+   conda install -c anaconda pyqt
    ```
 
 2. Check whether torch is using GPU
