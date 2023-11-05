@@ -37,7 +37,13 @@ class ImageLoader:
             )
         )
 
-        self._image_list.sort(key=lambda x: int(x.split("/")[-1].split(".")[0]))
+        # sort image by name
+        # if image name is 1.png, 2.png, 3.png, 4.png, 5.png
+        # check if image name is number
+        if self._image_list[0].split("/")[-1].split(".")[0].isdigit():
+            self._image_list.sort(key=lambda x: int(x.split("/")[-1].split(".")[0]))
+        else:
+            self._image_list.sort()
 
         self._image_index = 0
 
