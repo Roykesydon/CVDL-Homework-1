@@ -36,6 +36,9 @@ class ImageLoader:
                 lambda x: not os.path.isdir(folder_path + os.sep + x), self._image_list
             )
         )
+
+        self._image_list.sort(key=lambda x: int(x.split("/")[-1].split(".")[0]))
+
         self._image_index = 0
 
     """
